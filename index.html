@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vedant Modi | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/background.ico">
+</head>
+<body>
+    <!-- Full-page Background Animation -->
+    <div class=""></div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/logo1.png" alt="Your Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Vedant Modi</h1>
+            <p></p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p class="slide-in">
+            🚀 Currently engaged in Web Development, Data Science, Java striving for excellence in each endeavor.
+        </p>
+        <p class="slide-in">
+            🤝 Open to collaboration on impactful open source projects, as I believe collective efforts lead to remarkable results. I'm particularly interested in projects that promote sustainability, education, or community well-being.
+        </p>
+        <p class="slide-in">
+            📊 Currently enhancing my skills in Data Analysis using Python, aiming for proficiency and precision in data-driven insights. My goal is to leverage data to uncover meaningful patterns and contribute to informed decision-making.
+        </p>
+        <p class="slide-in">
+            💬 Outside of coding, I’m passionate about gardening and exploring diverse natural landscapes, while also engaging in discussions on tech trends and contributing to knowledge-sharing communities.
+        </p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-cards">
+            <div class="project-card">
+                <h3>Snake Game </h3>
+                <p>The Snake Game in C++ is a simple arcade-style game where the player controls a snake to eat food, grow longer, and avoid collisions. It’s a great project to explore basic C++ concepts and game development.</p>
+                <a href="https://github.com/VEDANTMODI21/SNAKE-GAME.git" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Netflix Clone</h3>
+                <p>An application just like netflix in which you can free movies and videos.</p>
+                <a href="https://github.com/VEDANTMODI21/Netflix-Clone.git" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Heart Disease Prediction</h3>
+                <p>A machine learning model to predict the likelihood of heart disease based on various health metrics.</p>
+                <a href="https://github.com/VEDANTMODI21/Heart-Disease-Prediction.git" target="_blank">View on GitHub</a>
+            </div>
+            <div class="project-card">
+                <h3>Cafe_Management_System</h3>
+                <p>A Cafe Management System is a software application designed to help cafes, restaurants, and similar establishments efficiently manage various aspects of their operations. .</p>
+                <a href="https://github.com/VEDANTMODI21/Cafe_Management_System.git" target="_blank">View on Github</a>
+            </div>
+        </div>
+       
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item c">C</div>
+            <div class="skill-item cpp">C++</div>
+            <div class="skill-item java">Java</div>
+            <div class="skill-item html">HTML</div>
+            <div class="skill-item css">CSS</div>
+            <div class="skill-item js">JavaScript</div>
+            <div class="skill-item mysql">MySQL</div>
+            <div class="skill-item python">Python</div>
+            <div class="skill-item django">Django</div> <!-- Changed class here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or would like to get in touch, feel free to reach out:</p>
+        <ul class="contact-links">
+            <li>
+                <a href="mailto:vedurrcks21@gmail.com" class="contact-link">
+                    <img src="images/gmail.png" alt="Gmail" />
+                    Email 
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Vedantmodi21" target="_blank" class="contact-link">
+                    <img src="images/GitHub-Logo.png" alt="Github Icon" />
+                Github
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/vedant-modi-b99b0628a/" target="_blank" class="contact-link">
+                    <img src="images/LinkedIn-Logo.png" alt="LinkedIn Icon" />
+                    LinkedIn
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Vedant Modi. All Rights Reserved.</p>
+    </footer>
+    
+    <!-- JavaScript Files -->
+    <script src="script.js"></script>
+    <script src="game.js"></script>
+    <script>
+        // JavaScript to handle background fade-out on scroll
+        window.addEventListener('scroll', function() {
+            const hero = document.querySelector('.hero');
+            if (window.scrollY > 0) {
+                hero.classList.add('fade-out');
+            } else {
+                hero.classList.remove('fade-out');
+            }
+        });
+    </script>
+</body>
+</html>
