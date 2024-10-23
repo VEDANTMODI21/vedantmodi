@@ -24,7 +24,7 @@ html {
 }
 
 .navbar .logo img {
-  height: 40px;
+  height: 50px;
   width: auto;
 }
 
@@ -33,18 +33,51 @@ html {
   display: flex;
   gap: 20px;
 }
-
+.navbar .nav-links li {
+  margin: 0;
+}
 .navbar .nav-links li a {
+  color: white;
   text-decoration: none;
-  color: #e0e0e0;
-  font-weight: 500;
-  transition: color 0.3s;
+  font-size: 18px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease;
 }
 
 .navbar .nav-links li a:hover {
-  color: #0071e3;
+  background-color: #1a374d; /* Hover effect */
+  border-radius: 5px;
 }
 
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    flex-direction: column;
+    position: absolute;
+    background-color: #333;
+    top: 60px;
+    right: 0;
+    height: auto;
+    display: none; /* Hide on smaller screens */
+  }
+
+  .navbar .nav-links.active {
+    display: flex; /* Show when active */
+  }
+
+  .navbar .logo {
+    margin-right: auto;
+  }
+}
+
+/* Make Navbar Sticky */
+.navbar.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333;
+  z-index: 100;
+}
 /* Section Styles */
 section {
   padding: 80px 20px; /* Add padding to account for the fixed navbar */
@@ -56,7 +89,8 @@ section {
 .about,
 .projects,
 .skills,
-.contact {
+.contact
+.certifications {
   text-align: center;
 }
 
@@ -67,9 +101,9 @@ section {
   padding: 40px 20px; /* Increased padding for better spacing */
   line-height: 1.6; /* Better line spacing for readability */
   text-align: left; /* Align text to the left for better readability */
-  background-color: #1f1f1f; /* Match the dark theme */
+  background-color: grey; /* Match the dark theme */
   border-radius: 10px; /* Slightly rounded corners for a smoother look */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow to create the floating effect */
+  box-shadow: 0 10px 30px rgba(66, 65, 65, 0.5); /* Subtle shadow to create the floating effect */
   transform: translateY(-10px); /* Lift the section slightly off the page */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
 }
@@ -543,7 +577,7 @@ section {
 
 /* Contact Section */
 .contact {
-  padding: 80px 20px;
+  padding: 100px 20px;
   text-align: center;
   background-color: #1f1f1f;
   color: #e0e0e0;
@@ -552,6 +586,8 @@ section {
 .contact h2 {
   margin-bottom: 20px;
   color: #0071e3;
+    margin-top: 0;
+    font-size: 2.5em;
 }
 
 .contact p {
@@ -575,7 +611,16 @@ section {
   transition: color 0.3s ease, background-color 0.3s ease,
     border-color 0.3s ease;
 }
-
+.contact-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.5em;
+}
+.contact-links li a img {
+  width: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
 .contact-link:hover {
   color: #fff;
   background-color: #0071e3;
@@ -586,11 +631,12 @@ section {
   justify-content: center;
   list-style: none;
   padding: 0;
+  
+}
+.contact-links li {
+  margin-bottom: 20px;
 }
 
-.contact-links li {
-  margin: 0 15px; /* Space between icons */
-}
 
 .contact-icon {
   width: 24px; /* Adjust size as needed */
@@ -867,4 +913,262 @@ h1 {
 .contact-link img:hover {
   filter: brightness(1.9);
   cursor: pointer;
+}
+.certifications {
+  padding: 50px 20px;
+  background-color: #343333;
+  text-align: center;
+}
+
+.certifications h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+
+}
+
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.certification-item {
+  background-color: #272626;
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(232, 232, 232, 0.1);
+  width: 80%;
+}
+
+.certification-item h3 {
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+
+.certification-item p {
+  font-size: 1.2rem;
+  color: #666;
+}
+.certification-item a {
+  color: #0066cc; /* Blue link color */
+  text-decoration: none;
+}
+
+.certification-item a:hover {
+  text-decoration: underline;
+  text-shadow: #0071e3;
+}
+.profile-section {
+  display: flex;              /* Align items in a row */
+  align-items: center;        /* Vertically center image and text */
+  gap: 20px;                  /* Space between image and text */
+  padding: 20px;              /* Add padding around the section */
+  max-width: 800px;           /* Limit the width of the profile section */
+  margin: 0 auto;             /* Center the section on the page */
+}
+
+.profile-pic {
+  width: 150px;               /* Set passport size */
+  height: 150px;              /* Keep image square */
+  object-fit: cover;          /* Ensure the image doesn't stretch */
+  border-radius: 5px;         /* Rounded corners */
+  border: 2px solid #000;     /* Thin black border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.about-section {
+  max-width: 600px;   
+  align-self: center;           /* Control the width of the text */
+}
+
+.about-section h1 {
+  font-size: 24px; 
+  align-self: center;              /* Larger font size for name */
+  margin-bottom: 10px;     /* Space below the name */
+  color: #333;                /* Dark text color */
+}
+
+.about-section p {
+  font-size: 16px;   
+  align-self: center;            /* Set font size for paragraph */
+  line-height: 1.6;           /* Improve readability */
+  color: #555;                /* Softer text color for professional look */
+}
+/* Add styles for the profile picture */
+.profile-pic {
+  width: 250px; /* Adjust size */
+  height: auto;
+  border-radius: 50%; /* Circular image */
+  border: 4px solid #fff; /* Add a white border for a clean look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px auto; /* Spacing around the image */
+  display: block;
+}
+
+/* Style for About section container */
+.about-container {
+  align-self: center;   
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  padding: 20px;
+}
+
+.about-text {
+  max-width: 600px;
+  margin-left: 30px;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+/* Add styles for the profile picture */
+.profile-pic {
+  width: 250px; /* Adjust size */
+  height: auto;
+  border-radius: 50%; /* Circular image */
+  border: 4px solid #fff; /* Add a white border for a clean look */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 20px auto; /* Spacing around the image */
+  display: block;
+}
+
+/* Center the About Me section heading */
+#about h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Space between heading and image */
+}
+/* Adjust the navbar height if it's sticky */
+/* Adjust the navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px; /* Adjust the padding to reduce space */
+  background-color: #333;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* Reduce the gap between items */
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-left: 10px; /* Reduce this margin */
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.nav-links li a:hover {
+  color: #ddd;
+}
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: center; /* Center the nav items */
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding for a smaller navbar height */
+  background-color: #333;
+  position: relative;
+  max-width: 1200px; /* Set a max-width to constrain the navbar size */
+  margin: 0 auto; /* Center the navbar horizontally */
+}
+
+/* Logo - Keep on the extreme left */
+.navbar .logo {
+  position: absolute;
+  left: 20px;px; /* Adjust this value as needed for padding */
+  /* Adjusting the icon size */
+  font-size: 1.5em; /* Set to desired size */
+  width: 50px; /* Set width if using images */
+  height: 50px; /* Set height if using images */
+}
+
+.navbar .logo img {
+  height: 50px; /* Adjust logo size if needed */
+}
+
+/* Navigation Links - Centered */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px; /* Reduced gap between links for a more compact look */
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px; /* Adjust font size to make links smaller */
+}
+
+.nav-links li a:hover {
+  color: #ddd;
+}
+
+/* Contact Section Styles */
+.contact {
+  background-color: #1a1a19; /* Light background for contrast */
+  padding: 50px 20px;
+  text-align: center;
+  color: #bba4a4;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #f71010; /* Dark teal for heading */
+}
+
+.contact p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.contact-links {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-links li {
+  margin: 10px 0; /* Space between links */
+}
+
+.contact-link {
+  text-decoration: none;
+  color: #27baa2; /* Match heading color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-link img {
+  width: 24px; /* Icon size */
+  height: 24px;
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.contact-link:hover {
+  color: #cfdfdc; /* Change color on hover */
 }
