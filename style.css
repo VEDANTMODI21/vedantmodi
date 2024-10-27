@@ -960,6 +960,25 @@ h1 {
   text-decoration: underline;
   text-shadow: #0071e3;
 }
+.certification-item {
+  position: relative; /* Required for transformation */
+  padding: 10px;
+  margin: 10px 0;
+  background-color: #272626; /* Background color for the item */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(232, 232, 232, 0.1); /* Slight shadow */
+  width: 80%; /* Adjust width */
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Transition for transform and opacity */
+  cursor: pointer; /* Pointer cursor for clickability */
+  opacity: 0.8; /* Initial opacity */
+}
+
+/* Active state for transformation */
+.certification-item.active {
+  transform: translate(var(--random-x), var(--random-y)) rotate(var(--random-rotate)); /* Transform based on random values */
+  opacity: 1; /* Full opacity when active */
+}
+
 .profile-section {
   display: flex;              /* Align items in a row */
   align-items: center;        /* Vertically center image and text */
@@ -1171,4 +1190,38 @@ h1 {
 
 .contact-link:hover {
   color: #cfdfdc; /* Change color on hover */
+}
+.certification-item {
+  transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth transition for transform and opacity */
+  opacity: 0.8; /* Initial opacity */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.certification-item.active {
+  transform: translate(var(--random-x), var(--random-y)) rotate(var(--random-rotate)); /* Apply translation and rotation */
+  opacity: 1; /* Full opacity when active */
+}
+
+/* Adjusting padding and margin for navbar items */
+nav ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;
+  margin-right: 20px; /* Adjust as needed for spacing */
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px 15px; /* Adjust padding for alignment */
+  color: white;
+  display: block;
+}
+
+nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Optional hover effect */
 }
